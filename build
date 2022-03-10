@@ -1,0 +1,7 @@
+conda env create -f environment.yml
+conda activate hls4ml-tutorial
+
+git clone https://github.com/hls-fpga-machine-learning/hls4ml-tutorial.git
+cd hls4ml-tutorial
+# modify something
+docker build --build-arg NB_USER=jovyan --build-arg NB_UID=1000 . -f docker/Dockerfile -t hls4ml-docker
